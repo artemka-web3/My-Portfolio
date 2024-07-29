@@ -1,45 +1,55 @@
-/* src/Carousel.css */
 .carousel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: auto;
-    overflow: hidden;
-  }
-  
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease;
-  }
-  
-  .carousel-item {
-    min-width: 100%;
-    box-sizing: border-box;
-  }
-  
-  .carousel img {
-    width: 100%;
-  }
-  
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    color: white;
-    font-size: 2rem;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-  }
-  
-  .carousel-control-prev {
-    left: 10px;
-  }
-  
-  .carousel-control-next {
-    right: 10px;
-  }
-  
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.carousel img {
+  width: 100%;
+  display: block;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.carousel-control-prev {
+  left: 10px;
+}
+
+.carousel-control-next {
+  right: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-size: 100%, 100%; /* Убедитесь, что иконки полностью видны */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: transparent/* Темнее при наведении */
+}

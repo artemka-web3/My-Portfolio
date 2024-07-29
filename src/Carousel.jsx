@@ -1,6 +1,6 @@
-// src/Carousel.js
 import React, { useState, useEffect, useRef } from 'react';
 import './Carousel.css';
+import { useSwipeable } from 'react-swipeable';
 
 const Carousel = ({ items }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -28,7 +28,11 @@ const Carousel = ({ items }) => {
   const nextSlide = () => {
     setCurrentIndex(currentIndex < items.length - 1 ? currentIndex + 1 : 0);
   };
-
+  const handlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+    trackMouse: true
+  });
   return (
     <div className="carousel">
       <div className="carousel-inner" ref={carouselInnerRef}>
@@ -40,6 +44,15 @@ const Carousel = ({ items }) => {
       </div>
       <button className="carousel-control-prev" onClick={prevSlide}>‹</button>
       <button className="carousel-control-next" onClick={nextSlide}>›</button>
+      <div className="carousel-indicators">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            className={`carousel-indicator ${index === currentIndex ? 'active' : ''}`}
+            onClick={() => setCurrentIndex(index)}
+          ></button>
+        ))}
+      </div>
     </div>
   );
 };

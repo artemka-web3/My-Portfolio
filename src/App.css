@@ -339,6 +339,14 @@ footer a:hover {
 }
 
 @media (max-width: 768px) {
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
   .about-container {
     flex-direction: column;
     padding: 10px;

@@ -9,6 +9,7 @@
 .carousel-inner {
   display: flex;
   transition: transform 0.5s ease;
+  will-change: transform; /* Оптимизация производительности */
 }
 
 .carousel-item {
@@ -32,8 +33,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
+  color: white;
 }
 
 .carousel-control-prev {
@@ -44,12 +46,35 @@
   right: 10px;
 }
 
+.carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.carousel-indicator {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-indicator.active {
+  background-color: white;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-size: 100%, 100%; /* Убедитесь, что иконки полностью видны */
+  background-size: 100%, 100%;
 }
 
 .carousel-control-prev-icon:hover,
 .carousel-control-next-icon:hover {
-  background-color: transparent/* Темнее при наведении */
+  background-color: transparent;
 }

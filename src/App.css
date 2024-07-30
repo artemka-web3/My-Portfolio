@@ -156,68 +156,7 @@ h1 {
   margin-bottom: 40px;
 }
 
-.carousel-container {
-  overflow: hidden;
-  margin-bottom: 20px;
-  height: 300px; /* Высота карусели */
-  width: 300px; /* Ширина карусели */
-  position: relative; /* Для управления стрелками */
-  border-radius: 50%; /* Сделать контейнер круглым */
-  flex: 1; /* Занимает половину пространства в about-content */
-  display: flex; /* Для центрирования содержимого */
-  justify-content: center; /* Для центрирования содержимого */
-  align-items: center; /* Для центрирования содержимого */
-}
 
-.carousel-container .carousel-item {
-  position: absolute; /* Абсолютное позиционирование для центрирования */
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%; /* Сделать элемент круглым */
-  overflow: hidden; /* Обрезать выходящее за края содержимое */
-}
-
-.carousel-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Сохраняет соотношение сторон, заполняя контейнер */
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2; /* Поверх всех элементов */
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-}
-
-.carousel-control-prev {
-  left: 10px;
-}
-
-.carousel-control-next {
-  right: 10px;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-size: 100%, 100%; /* Убедитесь, что иконки полностью видны */
-}
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-  background-color: rgba(0, 0, 0, 0.7); /* Темнее при наведении */
-}
 
 .about-content {
   display: flex;

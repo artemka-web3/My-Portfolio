@@ -12,7 +12,7 @@ import mark1 from './marks/mark1.png'
 import mark2 from './marks/mark2.png'
 import mark3 from './marks/mark3.png'
 import mark4 from './marks/mark4.png'
-import mark5 from './marks/mark4.png'
+import mark5 from './marks/mark5.png'
 
 
 import achiv1 from './achivs/achiv1.png'

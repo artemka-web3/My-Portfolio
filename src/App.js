@@ -7,6 +7,8 @@ import './App.css';
 import Carousel from './Carousel';
 import logo from './myimg.jpg';
 import img from './logo.png';
+import prof from './prof.png';
+
 
 import mark1 from './marks/mark1.png'
 import mark2 from './marks/mark2.png'
@@ -102,7 +104,7 @@ function About() {
             <div className="about-container">
               <div className="about-content">
                 <div className="about-photo square">
-                  <img src={logo} alt="About Me" />
+                  <img src={prof} alt="About Me" />
                 </div>
                 <div className="about-text">
                   <p>

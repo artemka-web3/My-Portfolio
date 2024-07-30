@@ -12,6 +12,8 @@ import mark1 from './marks/mark1.png'
 import mark2 from './marks/mark2.png'
 import mark3 from './marks/mark3.png'
 import mark4 from './marks/mark4.png'
+import mark5 from './marks/mark4.png'
+
 
 import achiv1 from './achivs/achiv1.png'
 import achiv2 from './achivs/achiv2.png'
@@ -82,7 +84,8 @@ function About() {
     mark1,
     mark2,
     mark3,
-    mark4
+    mark4,
+    mark5
   ];
 
   return (

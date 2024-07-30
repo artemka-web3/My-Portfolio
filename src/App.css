@@ -350,6 +350,8 @@ footer a:hover {
   .about-container {
     flex-direction: column;
     padding: 10px;
+    overflow-x: hidden;
+
   }
 
   .sidebar {
